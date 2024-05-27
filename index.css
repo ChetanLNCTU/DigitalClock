@@ -1,0 +1,194 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header{
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#heading_animation{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    /* margin-bottom: 100px; */
+    padding-top: 1rem;
+    text-shadow:0 0 75px #00ff88, 0 0 75px #00ff88, 0 0 75px #00ff88;
+}
+#heading_style{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+    box-sizing: border-box;
+    font-size: calc(1.375rem + 1.5vw);
+    animation: myfirst .11s ease-in-out infinite alternate;
+    /* text-shadow: 0 0 10px rgb(255, 255, 255),0 0 10px rgb(255, 255, 255),0 0 10px rgb(255, 255, 255); */
+    background-color: transparent;
+ }
+@keyframes myfirst
+{
+    from {text-shadow: 0 0 100px #00ff88;}
+   
+}
+#clock_box{
+    /* width: 2000px;
+    height: 2000px; */
+    width: 80%;
+    height: 100%;
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+#clock_round{
+    /* width: 2000px;
+    height: 2000px; */
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    border:1px solid #0fa;
+    border-radius: 50%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+   
+    /* box-shadow: inset 0 0 2px solid #0fa;
+    border-radius: 50%; */
+}
+#kanta_section{
+    background-color: transparent;
+    border:1px solid #0fa;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    
+}
+#second_kanta{
+    width: 5px;
+    height:45%;
+    border-radius: 2px;
+    background-color: #0fa;
+    animation: kante 60s steps(60,end) infinite;
+     animation-delay: 0s;
+     animation-direction: reverse;
+     bottom: 50%;
+     position:absolute;
+     left: 50%;
+     transform-origin: bottom;
+   
+}
+@keyframes kante{
+    0%{
+        transform: rotate(360deg);
+      
+    }
+}
+#minutes_kanta{
+    width: 5px;
+    height: 38%;
+    border-radius: 2px;
+    background-color: azure;
+    animation: minutes 3600s steps(60,end) infinite;
+    animation-direction: reverse;
+    position: absolute;
+    bottom: 50%;
+    
+    transform-origin: bottom;
+    left: 50%;
+}
+@keyframes minutes{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+#hour_kanta{
+    width:5px;
+    height: 25%;
+    background-color: azure;
+    animation: hour 86400s steps(60,end) infinite;
+    animation-direction: reverse;
+    bottom: 50%;
+    position: absolute;
+    left: 50%;
+    transform-origin: 50%;
+    border-radius: 2px;
+}
+@keyframes hour{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+#kanta_section::after{
+    content:"";
+    width: 12px;
+    height: 12px;
+    background-color: #0fa;
+    border-radius: 50%;
+    z-index: 11;
+}
+#real_clock{
+    width: 80%;
+    height: 40%;
+    background-color: transparent;
+    color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+    font-size: 3em;
+    margin-top: 10px;
+}
+#digital_clock{
+    width: 80%;
+    height: 10%;
+    background-color: transparent;
+    color: beige;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+#Days{
+  
+    margin-left:5px;
+}
+#Months{
+    margin-left:5px;
+}
+#Years{
+    margin-left:5px;
+
+}
+#footer{
+    width: 80%;
+    height: 10%;
+    background-color: transparent;
+    color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 0.1rem; */
+}
+#footer span{
+    color: #0fa;
+}
